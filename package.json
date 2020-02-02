@@ -1,0 +1,43 @@
+{
+  "name": "@hackclub/markdown",
+  "description": "Render Markdown to HTML, Hack Club-style",
+  "version": "0.0.1",
+  "author": "Lachlan Campbell <lachlan@hackclub.com> (https://lachlanjc.me)",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "sideEffects": false,
+  "scripts": {
+    "prepare": "microbundle --external none",
+    "watch": "microbundle watch --no-compress --external none"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hackclub/markdown.git"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@mapbox/rehype-prism": "^0.4.0",
+    "github-slugger": "^1.2.1",
+    "hast-util-sanitize": "^2.0.1",
+    "mdast-util-to-string": "^1.0.7",
+    "rehype-raw": "^4.0.1",
+    "rehype-sanitize": "^3.0.0",
+    "rehype-stringify": "^6.0.1",
+    "remark-parse": "^7.0.2",
+    "remark-rehype": "^5.0.0",
+    "unified": "^8.4.2",
+    "unist-util-remove": "^1.0.3",
+    "unist-util-visit": "^2.0.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}

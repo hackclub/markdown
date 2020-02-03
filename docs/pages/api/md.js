@@ -1,4 +1,4 @@
-import md from '../../../dist/index.js'
+import md from '@hackclub/markdown'
 
 export default async (req, res) => {
   const { text } = req.query

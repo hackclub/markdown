@@ -26,11 +26,11 @@ const getReadme = async () => (
 )
 ```
 
-| Param       | Default | Description                                                     |
-| ----------- | ------- | --------------------------------------------------------------- |
-| input       | Req’d!  | String. The Markdown text to transform.                         |
-| filePath    | Req’d!  | String. The Markdown’s path (for fixing relative image links).  |
-| imagePrefix | `'/'`   | String. A prefix for the path to relative images.               |
-| removeTitle | `false` | Bool. Remove starting `h1` (if titles are rendered separately). |
+| Param       | Default        | Description                                                     |
+| ----------- | -------------- | --------------------------------------------------------------- |
+| input       | Req’d!         | String. The Markdown text to transform.                         |
+| filePath    | `'/README.md'` | String. The Markdown’s path (for fixing relative image links).  |
+| imagePrefix | `'/'`          | String. A prefix for the path to relative images.               |
+| removeTitle | `false`        | Bool. Remove starting `h1` (if titles are rendered separately). |
 
 We recommend using [gray-matter](https://npm.im/gray-matter) alongside `@hackclub/markdown` for parsing frontmatter, but it’s not included in this package.

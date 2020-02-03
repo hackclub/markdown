@@ -27,7 +27,7 @@ const getProcessor = unified()
 
 const markdownToHtml = async (
   md,
-  filePath,
+  filePath = '/README.md',
   imagePrefix = '/',
   removeTitle = false
 ) => {

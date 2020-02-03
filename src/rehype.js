@@ -46,15 +46,16 @@ const rehypeDocs = ({ filePath, imagePrefix, removeTitle }) => {
 
     // Reset the slugger because single pages can have multiple urls to the same hash
     anchorSlugger.reset()
-    // The URL is relative at this point
-    node.properties.className = 'relative'
     // Update the hash used by anchors to match the one set for headers
     node.properties.href = hash
       ? `${relativePath}#${anchorSlugger.slug(hash)}`
       : relativePath
-    // Relative URL for another workshope
-    if (href.startsWith('/')) {
+    // Relative URL for other files
+    if (href.startsWith('/') || href.startsWith('#')) {
       node.properties.href = removeExt(node.properties.href)
+      node.properties.className = 'internal'
+    } else {
+      node.properties.className = 'external'
     }
   }
 

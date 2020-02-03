@@ -9,8 +9,11 @@ import {
   Label,
   Textarea
 } from 'theme-ui'
+import Head from 'next/head'
+import Meta from '@hackclub/meta'
 import ColorSwitcher from '../components/color-switcher'
 import Content from '../components/content'
+import fetch from 'isomorphic-unfetch'
 
 const sample = `# Hello!
 
@@ -31,6 +34,12 @@ export default () => {
   }, [text])
   return (
     <Container sx={{ py: [3, 4, 5] }}>
+      <Head>
+        <Meta
+          name="Markdown"
+          description="Render Markdown to HTML, Hack Club-style"
+        />
+      </Head>
       <ColorSwitcher />
       <Heading as="h1" variant="title" sx={{ textAlign: 'center' }}>
         <Text

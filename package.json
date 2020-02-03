@@ -10,7 +10,8 @@
   "sideEffects": false,
   "scripts": {
     "prepare": "microbundle --external none",
-    "watch": "microbundle watch --no-compress --external none"
+    "watch": "microbundle watch --no-compress --external none",
+    "test": "nyc ava"
   },
   "publishConfig": {
     "access": "public"
@@ -38,6 +39,9 @@
     "unist-util-visit": "^2.0.1"
   },
   "devDependencies": {
-    "microbundle": "^0.11.0"
+    "@babel/cli": "^7.8.4",
+    "ava": "^3.1.0",
+    "microbundle": "^0.11.0",
+    "nyc": "^15.0.0"
   }
 }

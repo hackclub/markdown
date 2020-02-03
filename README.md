@@ -14,6 +14,7 @@ yarn add @hackclub/markdown
 This package does not include any frontend code, such as React or CSS.
 
 This package is designed for rendering at build or otherwise on a server, not client-side.
+Always use with `await`.
 
 ```js
 import fs from 'fs'

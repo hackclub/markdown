@@ -34,3 +34,5 @@ const getReadme = async () => (
 | removeTitle | `false`        | Bool. Remove starting `h1` (if titles are rendered separately). |
 
 We recommend using [gray-matter](https://npm.im/gray-matter) alongside `@hackclub/markdown` for parsing frontmatter, but it’s not included in this package.
+
+MIT License

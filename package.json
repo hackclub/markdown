@@ -10,7 +10,7 @@
   "sideEffects": false,
   "scripts": {
     "test": "ava",
-    "prepare": "microbundle --external none",
+    "prepare": "rm -rf ./dist && microbundle --external none",
     "watch": "microbundle watch --no-compress --external none",
     "build": "yarn prepare && cd docs && yarn build"
   },

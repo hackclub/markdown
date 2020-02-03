@@ -1,9 +1,5 @@
 {
-  "version": 2,
   "name": "markdown",
-  "public": true,
-  "builds": [{ "src": "docs/next.config.js", "use": "@now/next" }],
-  "github": {
-    "silent": true
-  }
+  "rewrites": [{ "source": "/(.+)", "destination": "/docs" }],
+  "github": { "silent": true }
 }

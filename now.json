@@ -1,5 +1,0 @@
-{
-  "name": "markdown",
-  "rewrites": [{ "source": "/(.+)", "destination": "/docs" }],
-  "github": { "silent": true }
-}

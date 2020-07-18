@@ -13,7 +13,6 @@ import Head from 'next/head'
 import Meta from '@hackclub/meta'
 import ColorSwitcher from '../components/color-switcher'
 import Content from '../components/content'
-import fetch from 'isomorphic-unfetch'
 
 const sample = `# Hello!
 
@@ -29,17 +28,16 @@ export default () => {
   const [html, setHtml] = useState('')
   useEffect(() => {
     fetch(`/api/md?text=${encodeURIComponent(text)}`)
-      .then(res => res.text())
-      .then(res => setHtml(res))
+      .then((res) => res.text())
+      .then((res) => setHtml(res))
   }, [text])
   return (
     <Container sx={{ py: [3, 4, 5] }}>
-      <Head>
-        <Meta
-          name="Markdown"
-          description="Render Markdown to HTML, Hack Club-style"
-        />
-      </Head>
+      <Meta
+        as={Head}
+        name="Markdown"
+        description="Render Markdown to HTML, Hack Club-style. Get the package on npm at @hackclub/markdown."
+      />
       <ColorSwitcher />
       <Heading as="h1" variant="title" sx={{ textAlign: 'center' }}>
         <Text
@@ -86,7 +84,7 @@ export default () => {
           </Label>
           <Textarea
             id="demo"
-            onChange={e => setText(e.target.value)}
+            onChange={(e) => setText(e.target.value)}
             value={text}
             rows={12}
             variant="forms.input"

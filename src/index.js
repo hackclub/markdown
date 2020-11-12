@@ -2,7 +2,6 @@ import unified from 'unified'
 import markdown from 'remark-parse'
 import remarkToRehype from 'remark-rehype'
 import raw from 'rehype-raw'
-import sanitize from 'rehype-sanitize'
 import prism from '@mapbox/rehype-prism'
 import html from 'rehype-stringify'
 // https://github.com/syntax-tree/hast-util-sanitize/blob/master/lib/github.json
@@ -18,8 +17,6 @@ const getProcessor = unified()
   .use(remarkToRehype, { handlers, allowDangerousHTML: true })
   // Add custom HTML found in the markdown file to the AST
   .use(raw)
-  // Sanitize the HTML
-  .use(sanitize, githubSchema)
   // Add syntax highlighting to the sanitized HTML
   .use(prism)
   .use(html)

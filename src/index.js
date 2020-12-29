@@ -6,7 +6,7 @@ import sanitize from 'rehype-sanitize'
 import prism from '@mapbox/rehype-prism'
 import html from 'rehype-stringify'
 // https://github.com/syntax-tree/hast-util-sanitize/blob/master/lib/github.json
-import githubSchema from 'hast-util-sanitize/lib/github'
+import githubSchema from 'hast-util-sanitize/lib/github.json'
 import docs, { handlers } from './rehype'
 
 // Allow className for all elements

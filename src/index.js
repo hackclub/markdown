@@ -9,7 +9,7 @@ import html from 'rehype-stringify'
 // https://github.com/syntax-tree/hast-util-sanitize/blob/master/lib/github.json
 import githubSchema from 'hast-util-sanitize/lib/github'
 import docs, { handlers } from './rehype'
-import { shToBashPlugin } from './plugins/sh-to-bash'
+import { shToShellPlugin } from './plugins/sh-to-shell'
 
 // Allow className for all elements
 githubSchema.attributes['*'].push('className')
@@ -17,7 +17,7 @@ githubSchema.attributes['*'].push('className')
 // Create the processor—the order of the plugins is important
 const getProcessor = unified()
   .use(markdown)
-  .use(shToBashPlugin)
+  .use(shToShellPlugin)
   .use(remarkToRehype, { handlers, allowDangerousHTML: true })
   // Add custom HTML found in the markdown file to the AST
   .use(raw)

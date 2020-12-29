@@ -24,6 +24,6 @@ test('returns html for markdown', async (t) => {
 test('returns html code sh markdown', async (t) => {
   const result = await md(text2)
   t.is(typeof result, 'string')
-  // t.true(result.includes('<code>'))
+  t.true(result.includes('<code'))
   t.snapshot(result)
 })

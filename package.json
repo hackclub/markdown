@@ -36,7 +36,7 @@
     "remark-rehype": "^5.0.0",
     "unified": "^8.4.2",
     "unist-util-remove": "^1.0.3",
-    "unist-util-visit": "^2.0.1"
+    "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

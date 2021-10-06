@@ -5,9 +5,11 @@ import raw from 'rehype-raw'
 import sanitize from 'rehype-sanitize'
 import prism from '@mapbox/rehype-prism'
 import html from 'rehype-stringify'
+
 // https://github.com/syntax-tree/hast-util-sanitize/blob/master/lib/github.json
 import githubSchema from 'hast-util-sanitize/lib/github'
 import docs, { handlers } from './rehype'
+import { shToShellPlugin } from './plugins/sh-to-shell'
 
 // Allow className for all elements
 githubSchema.attributes['*'].push('className')
@@ -15,6 +17,7 @@ githubSchema.attributes['*'].push('className')
 // Create the processor—the order of the plugins is important
 const getProcessor = unified()
   .use(markdown)
+  .use(shToShellPlugin)
   .use(remarkToRehype, { handlers, allowDangerousHTML: true })
   // Add custom HTML found in the markdown file to the AST
   .use(raw)

@@ -7,7 +7,7 @@ import prism from '@mapbox/rehype-prism'
 import html from 'rehype-stringify'
 
 // https://github.com/syntax-tree/hast-util-sanitize/blob/master/lib/github.json
-import githubSchema from 'hast-util-sanitize/lib/github'
+import githubSchema from './github'
 import docs, { handlers } from './rehype'
 import { shToShellPlugin } from './plugins/sh-to-shell'
 

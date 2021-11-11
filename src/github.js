@@ -25,6 +25,9 @@ export default {
     ],
     "tr": [
       "table"
+    ],
+    "source": [
+      "video"
     ]
   },
   "protocols": {
@@ -110,7 +113,9 @@ export default {
     "span",
     "time",
     "wbr",
-    "input"
+    "input",
+    "video",
+    "source"
   ],
   "attributes": {
     "a": [
@@ -205,6 +210,7 @@ export default {
       "size",
       "span",
       "start",
+      "src",
       "summary",
       "tabIndex",
       "target",

@@ -1,7 +1,7 @@
 {
   "name": "@hackclub/markdown",
   "description": "Render Markdown to HTML, Hack Club-style",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.2",
   "author": "Lachlan Campbell <lachlan@hackclub.com> (https://lachlanjc.me)",
   "source": "src/index.js",
   "main": "dist/index.js",

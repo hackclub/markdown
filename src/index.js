@@ -21,8 +21,8 @@ const getProcessor = unified()
   .use(remarkToRehype, { handlers, allowDangerousHTML: true })
   // Add custom HTML found in the markdown file to the AST
   .use(raw)
-  // Sanitize the HTML
-  .use(sanitize, githubSchema)
+  // Sanitize the HTML (disabled temporarily as it was blocking workshops progress)
+  // .use(sanitize, githubSchema)
   // Add syntax highlighting to the sanitized HTML
   .use(prism)
   .use(html)

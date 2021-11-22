@@ -3,11 +3,12 @@ export function detailsNode(title, src) {
   return {
     type: 'element',
     tagName: 'details',
-    properties: { open: true },
+    properties: { open: true, className: 'details-video' },
     children: [
       {
         type: 'element',
         tagName: 'summary',
+        properties: { className: 'details-video-summary' },
         children: [
           {
             type: 'element',

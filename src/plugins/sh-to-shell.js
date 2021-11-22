@@ -1,6 +1,6 @@
 import visit from 'unist-util-visit'
 
-export function shToShellPlugin() {
+export default function shToShellPlugin() {
   return (tree) =>
     new Promise(async (resolve, reject) => {
       visit(tree, 'code', (node) => {

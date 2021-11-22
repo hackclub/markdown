@@ -12,8 +12,6 @@ function nodeToDetails(node, src) {
   const filename = src.split('/').pop()
   const newNode = detailsNode(filename, src)
   for (const k in newNode) node[k] = newNode[k]
-
-  console.log(node, node.children[0].children)
 }
 
 const visitVideo = (node) => {

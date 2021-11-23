@@ -14,32 +14,32 @@ function nodeToDetails(node, src) {
   for (const k in newNode) node[k] = newNode[k]
 }
 
-const visitVideo = (node) => {
-  const child = node.children[0]
-
-  if (
-    child.type === 'text' &&
-    // delimiter.test(child.value) &&
-    videoTest.test(child.value)
-  ) {
-    nodeToDetails(node, child.value)
-  }
-  // if (
-  //   child.type === 'element' &&
-  //   child.tagName === 'a' &&
-  //   child.properties &&
-  //   typeof child.properties.href === 'string' &&
-  //   videoTest.test(child.properties.href)
-  // ) {
-  //   nodeToDetails(node, child.properties.href)
-  // }
-}
-
 const videoLinkToDetails = () => {
-  const nodeTest = (node) => node.tagName === 'p' && node.children.length === 1
+  const nodeTest = (node) => {
+    const child = node.children && node.children[0]
+    return (
+      node.tagName === 'p' &&
+      node.children.length === 1 &&
+      child.type === 'text' &&
+      videoTest.test(child.value)
+    )
+  }
 
   return (tree) => {
-    visit(tree, nodeTest, visitVideo)
+    visit(tree, nodeTest, (node) => {
+      const child = node.children[0]
+      nodeToDetails(node, child.value)
+    
+      // if (
+      //   child.type === 'element' &&
+      //   child.tagName === 'a' &&
+      //   child.properties &&
+      //   typeof child.properties.href === 'string' &&
+      //   videoTest.test(child.properties.href)
+      // ) {
+      //   nodeToDetails(node, child.properties.href)
+      // }
+    })
   }
 }
 

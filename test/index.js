@@ -18,8 +18,6 @@ This should not be rendered: https://user-images.githubusercontent.com/27078897/
 But this should!
 
 https://user-images.githubusercontent.com/27078897/141502788-e4687f86-2d43-458b-a524-c420fba09ffd.mov
-
-
 `
 
 test('returns html for markdown', async (t) => {

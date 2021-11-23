@@ -9,7 +9,8 @@ import html from 'rehype-stringify'
 // https://github.com/syntax-tree/hast-util-sanitize/blob/master/lib/github.json
 import githubSchema from './github'
 import docs, { handlers } from './rehype'
-import { shToShellPlugin } from './plugins/sh-to-shell'
+import shToShellPlugin from './plugins/sh-to-shell'
+import videoDetailsPlugin from './plugins/video-link-to-details'
 
 // Allow className for all elements
 githubSchema.attributes['*'].push('className')
@@ -18,7 +19,7 @@ githubSchema.attributes['*'].push('className')
 const getProcessor = unified()
   .use(markdown)
   .use(shToShellPlugin)
-  .use(remarkToRehype, { handlers, allowDangerousHTML: true })
+  .use(remarkToRehype, { handlers, allowDangerousHtml: true })
   // Add custom HTML found in the markdown file to the AST
   .use(raw)
   // Sanitize the HTML (disabled temporarily as it was blocking workshops progress)
@@ -26,6 +27,7 @@ const getProcessor = unified()
   // Add syntax highlighting to the sanitized HTML
   .use(prism)
   .use(html)
+  .use(videoDetailsPlugin)
   .freeze()
 
 const markdownToHtml = async (

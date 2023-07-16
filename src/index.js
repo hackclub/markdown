@@ -1,6 +1,7 @@
 import unified from 'unified'
 import markdown from 'remark-parse'
 import remarkToRehype from 'remark-rehype'
+import remarkGfm from 'remark-gfm'
 import raw from 'rehype-raw'
 import sanitize from 'rehype-sanitize'
 import prism from '@mapbox/rehype-prism'
@@ -19,6 +20,7 @@ githubSchema.attributes['*'].push('className')
 const getProcessor = unified()
   .use(markdown)
   .use(shToShellPlugin)
+  .use(remarkGfm)
   .use(remarkToRehype, { handlers, allowDangerousHtml: true })
   // Add custom HTML found in the markdown file to the AST
   .use(raw)

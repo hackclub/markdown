@@ -17,18 +17,21 @@ function nodeToDetails(node, src) {
 const videoLinkToDetails = () => {
   const nodeTest = (node) => {
     const child = node.children && node.children[0]
+    const grandChild = child && child.children && child.children[0]
     return (
       node.tagName === 'p' &&
       node.children.length === 1 &&
-      child.type === 'text' &&
-      videoTest.test(child.value)
+      child.tagName === 'a' &&
+      child.children.length === 1 &&
+      grandChild.type === 'text' &&
+      videoTest.test(grandChild.value)
     )
   }
 
   return (tree) => {
     visit(tree, nodeTest, (node) => {
-      const child = node.children[0]
-      nodeToDetails(node, child.value)
+      const grandchild = node.children[0].children[0]
+      nodeToDetails(node, grandchild.value)
     
       // if (
       //   child.type === 'element' &&

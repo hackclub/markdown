@@ -9,10 +9,10 @@
   "unpkg": "dist/index.umd.js",
   "sideEffects": false,
   "scripts": {
-    "test": "ava",
-    "prepare": "rm -rf ./dist && microbundle --external none --target node",
+    "test": "bun test",
+    "prepare": "rm -rf ./dist && microbundle --compress --external none --target node",
     "watch": "microbundle watch --no-compress --external none --target node",
-    "build": "yarn prepare && cd docs && yarn build"
+    "build": "bun run prepare && cd docs && bun run build"
   },
   "publishConfig": {
     "access": "public"
@@ -36,7 +36,6 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "ava": "^6.0.0",
     "microbundle": "^0.15.0"
   }
 }

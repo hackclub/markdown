@@ -1,6 +1,6 @@
-import visit from 'unist-util-visit'
-import toString from 'mdast-util-to-string'
-import removeNode from 'unist-util-remove'
+import { visit } from 'unist-util-visit'
+import { toString } from 'mdast-util-to-string'
+import { remove } from 'unist-util-remove'
 import GithubSlugger from 'github-slugger'
 
 export const handlers = {
@@ -94,7 +94,7 @@ const rehypeDocs = ({ filePath, imagePrefix, removeTitle }) => {
 
   // Remove title from beginning of docs
   const visitH1 = (node, tree) => {
-    if (node.position.start.line < 4) removeNode(tree, node)
+    if (node.position.start.line < 4) remove(tree, node)
     return tree
   }
 

@@ -61,6 +61,9 @@ describe('code blocks', () => {
     const result = await md('```js\nconst x = 1\n```')
     expect(result).toContain('<code class="language-js">')
     expect(result).toContain('token keyword')
+    expect(result).toContain('const')
+    expect(result).toContain('token operator')
+    expect(result).toContain('token number')
   })
 
   test('converts sh language to shell (sh-to-shell plugin)', async () => {
@@ -175,7 +178,7 @@ describe('rehype docs plugin', () => {
 
   test('prefixes relative image paths with imagePrefix', async () => {
     const result = await md('![](img/photo.png)', '/workshop/README.md', '/raw')
-    expect(result).toContain('src="/raw//workshop/img/photo.png"')
+    expect(result).toContain('src="/raw/workshop/img/photo.png"')
   })
 
   test('does not prefix absolute image URLs', async () => {

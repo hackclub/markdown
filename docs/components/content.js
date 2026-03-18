@@ -1,23 +1,14 @@
 import { BaseStyles } from 'theme-ui'
-import styled from '@emotion/styled'
-
-const StyledContent = styled(BaseStyles)`
-  font-size: 1.25rem;
-
-  a {
-    word-break: break-word;
-  }
-
-  .heading a {
-    color: inherit;
-    text-decoration: none;
-  }
-`
 
 const Content = ({ html }) => (
-  <StyledContent
+  <BaseStyles
     as="article"
     className="docs"
+    sx={{
+      fontSize: '1.25rem',
+      a: { wordBreak: 'break-word' },
+      '.heading a': { color: 'inherit', textDecoration: 'none' }
+    }}
     dangerouslySetInnerHTML={{ __html: html }}
   />
 )

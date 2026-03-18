@@ -1,10 +1,10 @@
 import { IconButton, useColorMode } from 'theme-ui'
 
-const ColorSwitcher = props => {
+const ColorSwitcher = (props) => {
   const [mode, setMode] = useColorMode()
   return (
     <IconButton
-      onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+      onClick={() => setMode(mode === 'dark' ? 'default' : 'dark')}
       title="Invert Colors"
       sx={{
         position: 'absolute',

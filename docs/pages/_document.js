@@ -1,22 +1,13 @@
-import Document, { Html,Head, Main, NextScript } from 'next/document'
-import { InitializeColorMode } from 'theme-ui'
+import { Html, Head, Main, NextScript } from 'next/document'
 
-export default class extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
-  }
-
-  render() {
-    return (
-      <Html lang="en">
-        <Head />
-        <body>
-          <InitializeColorMode />
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    )
-  }
+export default function Document() {
+  return (
+    <Html lang="en">
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
 }

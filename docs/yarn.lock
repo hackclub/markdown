@@ -2065,10 +2065,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@hackclub/markdown@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@hackclub/markdown/-/markdown-0.0.41.tgz#748b65a3b3992f08430b5a5f63edac1699a96d01"
-  integrity sha512-Uf6WDDrGIDGglL8w8Px05NN5D3iLhqXo8EUkaJkZI/P1bMnSGRkL+PTWwdKluBqzbMfn0HWcIVwIQNTwhiuueQ==
+"@hackclub/markdown@^0.0.43":
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/@hackclub/markdown/-/markdown-0.0.43.tgz#983a5cd2c8ec23c64ecae9efbab411f18461ae42"
+  integrity sha512-9cjtujLRcPJXYoxbcvBZh5td5ymhXtntRYE4UsSnqBb05G4jzMBcm0eJSSWd+asdyV6oI9Iu468ES+VTkpZJnQ==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.11"
@@ -5757,9 +5757,9 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
 minimatch@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
-  integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.5.tgz#580c88f8d5445f2bd6aa8f3cadefa0de79fbd69e"
+  integrity sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==
   dependencies:
     brace-expansion "^1.1.7"
 

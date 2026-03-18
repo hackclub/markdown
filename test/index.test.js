@@ -1,5 +1,5 @@
 import { test, expect, describe } from 'bun:test'
-import md from '../dist'
+import md from '../src/index.js'
 
 describe('basic markdown', () => {
   test('renders headings', async () => {

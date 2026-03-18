@@ -3,20 +3,25 @@
   "description": "Render Markdown to HTML, Hack Club-style",
   "version": "0.1.1",
   "author": "Lachlan Campbell <lachlan@hackclub.com> (https://lachlanjc.me)",
-  "source": "src/index.js",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "unpkg": "dist/index.umd.js",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "src/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
-    "dist",
+    "src",
+    "dist/index.cjs",
     "README.md",
     "LICENSE.md"
   ],
   "sideEffects": false,
   "scripts": {
     "test": "bun test",
-    "prepare": "rm -rf ./dist && microbundle --compress --external none --target node",
-    "watch": "microbundle watch --no-compress --external none --target node",
+    "prepare": "bun build src/index.js --target=node --format=cjs --packages=external --outfile=dist/index.cjs",
     "build": "bun run prepare && cd docs && bun run build"
   },
   "publishConfig": {
@@ -40,7 +45,5 @@
     "unist-util-remove": "^4.0.0",
     "unist-util-visit": "^5.0.0"
   },
-  "devDependencies": {
-    "microbundle": "^0.15.0"
-  }
+  "devDependencies": {}
 }

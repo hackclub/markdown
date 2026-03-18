@@ -61,6 +61,9 @@ describe('code blocks', () => {
     const result = await md('```js\nconst x = 1\n```')
     expect(result).toContain('<code class="language-js">')
     expect(result).toContain('token keyword')
+    expect(result).toContain('const')
+    expect(result).toContain('token operator')
+    expect(result).toContain('token number')
   })
 
   test('converts sh language to shell (sh-to-shell plugin)', async () => {

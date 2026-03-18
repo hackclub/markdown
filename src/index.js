@@ -2,7 +2,7 @@ import { unified } from 'unified'
 import markdown from 'remark-parse'
 import remarkToRehype from 'remark-rehype'
 import raw from 'rehype-raw'
-import sanitize from 'rehype-sanitize'
+// import sanitize from 'rehype-sanitize' commented out due to line 26
 import prism from '@mapbox/rehype-prism'
 import html from 'rehype-stringify'
 

@@ -175,7 +175,7 @@ describe('rehype docs plugin', () => {
 
   test('prefixes relative image paths with imagePrefix', async () => {
     const result = await md('![](img/photo.png)', '/workshop/README.md', '/raw')
-    expect(result).toContain('src="/raw//workshop/img/photo.png"')
+    expect(result).toContain('src="/raw/workshop/img/photo.png"')
   })
 
   test('does not prefix absolute image URLs', async () => {

@@ -86,10 +86,8 @@ const rehypeDocs = ({ filePath, imagePrefix, removeTitle }) => {
     // If linking to a remote image, ignore
     if (src.match(ABSOLUTE_URL)) return node
     // If linking to an internal image, possibly prefix path
-    node.properties.src = `${imagePrefix}/${filePath.replace(
-      '/README.md',
-      ''
-    )}/${src}`
+    const dir = filePath.replace('/README.md', '').replace(/^\//, '')
+    node.properties.src = `${imagePrefix}/${dir}${dir ? '/' : ''}${src}`
   }
 
   // Remove title from beginning of docs

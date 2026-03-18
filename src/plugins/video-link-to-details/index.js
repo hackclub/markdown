@@ -1,7 +1,7 @@
 // Derived from https://github.com/jaywcjlove/rehype-video/tree/main/src
 
 import { visit } from 'unist-util-visit'
-import { detailsNode } from './node'
+import { detailsNode } from './node.js'
 
 // TODO improve regex
 const videoTest = /^(https?:\/\/[^\s]+(\.mp4|\.mov))$/

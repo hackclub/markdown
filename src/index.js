@@ -8,10 +8,10 @@ import prism from '@mapbox/rehype-prism'
 import html from 'rehype-stringify'
 
 // https://github.com/syntax-tree/hast-util-sanitize/blob/master/lib/github.json
-import githubSchema from './github'
-import docs, { handlers } from './rehype'
-import shToShellPlugin from './plugins/sh-to-shell'
-import videoDetailsPlugin from './plugins/video-link-to-details'
+import githubSchema from './github.js'
+import docs, { handlers } from './rehype.js'
+import shToShellPlugin from './plugins/sh-to-shell.js'
+import videoDetailsPlugin from './plugins/video-link-to-details/index.js'
 
 // Allow className for all elements
 githubSchema.attributes['*'].push('className')

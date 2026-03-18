@@ -2,3 +2,5 @@ node_modules
 dist
 coverage
 .next
+.vercel
+.env*.local

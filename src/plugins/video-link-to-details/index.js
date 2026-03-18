@@ -1,6 +1,6 @@
 // Derived from https://github.com/jaywcjlove/rehype-video/tree/main/src
 
-import visit from 'unist-util-visit'
+import { visit } from 'unist-util-visit'
 import { detailsNode } from './node'
 
 // TODO improve regex

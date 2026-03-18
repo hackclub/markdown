@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Container,
   NavLink,
@@ -23,7 +23,7 @@ const hi = () => console.log('Hello!')
 \`\`\`
 `
 
-export default () => {
+export default function Home() {
   const [text, setText] = useState(sample)
   const [html, setHtml] = useState('')
   useEffect(() => {

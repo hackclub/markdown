@@ -1,0 +1,8 @@
+src/
+test/
+docs/
+.github/
+.vercel/
+bun.lock
+prettier.config.js
+vercel.json

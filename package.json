@@ -7,6 +7,11 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "unpkg": "dist/index.umd.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md"
+  ],
   "sideEffects": false,
   "scripts": {
     "test": "bun test",

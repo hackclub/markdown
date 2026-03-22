@@ -21,7 +21,7 @@
   "sideEffects": false,
   "scripts": {
     "test": "bun test",
-    "prepare": "bun build src/index.js --target=node --format=cjs --packages=external --outfile=dist/index.cjs",
+    "prepare": "bun build src/index.js --target=node --format=cjs --packages=external --outfile=dist/index.cjs && node scripts/fix-cjs.js",
     "build": "bun run prepare && cd docs && bun run build"
   },
   "publishConfig": {
